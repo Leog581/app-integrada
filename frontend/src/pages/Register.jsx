@@ -18,7 +18,7 @@ const Register = () => {
         setLoading(true);
         try {
             await register(name, email, password);
-            navigate('/tickets');
+            navigate('/dashboard'); // Ahora redirige al Dashboard
         } catch (err) {
             setError(err.message);
         } finally {
@@ -27,11 +27,18 @@ const Register = () => {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-[70vh]">
+        <div className="relative flex justify-center items-center min-h-[75vh]">
+            {/* Botón para volver al inicio público */}
+            <div className="absolute top-0 left-0">
+                <Link to="/" className="text-gray-500 hover:text-green-600 font-medium flex items-center gap-2 transition-colors">
+                    ← Volver al inicio
+                </Link>
+            </div>
+
             <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
                 <div className="text-center mb-8">
                     <h2 className="text-3xl font-extrabold text-gray-800">Crear Cuenta</h2>
-                    <p className="text-gray-500 mt-2">Unite para empezar a reportar problemas</p>
+                    <p className="text-gray-500 mt-2">Unite para empezar a usar el sistema</p>
                 </div>
                 
                 {error && <div className="bg-red-50 text-red-600 p-3 rounded-lg mb-6 text-sm border border-red-100 text-center">{error}</div>}

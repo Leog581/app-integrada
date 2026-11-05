@@ -3,9 +3,15 @@ const express = require('express');
 const cors = require('cors');
 const { User, sequelize } = require('./models');
 const { notFound, errorHandler } = require('./middlewares/errorHandler');
+
+// Rutas
 const authRoutes = require('./routes/authRoutes');
 const ticketRoutes = require('./routes/ticketRoutes');
 const userRoutes = require('./routes/userRoutes');
+const agendaRoutes = require('./routes/agendaRoutes');
+const itemsRoutes = require('./routes/itemsRoutes');
+const perfilRoutes = require('./routes/perfilRoutes');
+const proveedoresRoutes = require('./routes/proveedoresRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,23 +20,20 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cors({ origin: process.env.FRONTEND_URL }));
 
-// Endpoint testeo base de datos
+// Endpoint testeo base de datos 
 app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', time: new Date().toISOString() });
 });
 
-// Ruta Keep-Alive (para el cron de Vercel)
+// Ruta Keep-Alive para el cron de Vercel
 app.get('/api/cron/keep-alive', async (req, res) => {
     const authHeader = req.headers.authorization;
     
-    // Verificar el secreto
     if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
         return res.status(401).json({ error: 'No autorizado' });
     }
 
-    // Hacer una consulta real a la base para generar actividad
     const userCount = await User.count();
-    
     res.json({ status: 'ok', message: 'Base de datos activa', users: userCount });
 });
 
@@ -38,18 +41,20 @@ app.get('/api/cron/keep-alive', async (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/tickets', ticketRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/agenda', agendaRoutes);
+app.use('/api/items', itemsRoutes);
+app.use('/api/perfil', perfilRoutes);
+app.use('/api/proveedores', proveedoresRoutes);
 
 // Manejo de errores
 app.use(notFound);
 app.use(errorHandler);
 
 // Inicialización del servidor
-// Función para arrancar en local
 async function startServer() {
     try {
         await sequelize.authenticate();
         
-        // Solo hacemos sync en local
         if (process.env.NODE_ENV !== 'production') {
             await sequelize.sync();
         }
@@ -63,7 +68,6 @@ async function startServer() {
     }
 }
 
-// Si estamos en Vercel (producción), exportamos la app. Si no, arrancamos el servidor.
 if (process.env.NODE_ENV !== 'production') {
     startServer();
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // <-- IMPORTANTE
 import { api } from '../api/client';
 import StatusBadge from '../components/StatusBadge';
 import Loading from '../components/Loading';
@@ -7,11 +8,8 @@ const AdminTickets = () => {
     const [tickets, setTickets] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
-    
-    // Estado para el filtro
     const [filterStatus, setFilterStatus] = useState('all');
 
-    // 1. Traemos TODOS los tickets
     useEffect(() => {
         const fetchAllTickets = async () => {
             try {
@@ -26,28 +24,22 @@ const AdminTickets = () => {
         fetchAllTickets();
     }, []);
 
-    // 2. Función para cambiar el estado de un ticket (PATCH)
     const handleStatusChange = async (id, newStatus) => {
         try {
             const updated = await api(`/tickets/${id}/status`, {
                 method: 'PATCH',
                 body: JSON.stringify({ status: newStatus })
             });
-            
-            // Actualizamos la lista local con el ticket modificado
             setTickets(tickets.map(t => t.id === id ? { ...t, status: updated.status } : t));
         } catch (err) {
             alert('Error al cambiar estado: ' + err.message);
         }
     };
 
-    // 3. Función para eliminar un ticket (DELETE)
     const handleDelete = async (id) => {
         if (!window.confirm('¿Seguro que querés eliminar este ticket definitivamente?')) return;
-        
         try {
             await api(`/tickets/${id}`, { method: 'DELETE' });
-            // Lo sacamos de la lista local
             setTickets(tickets.filter(t => t.id !== id));
         } catch (err) {
             alert('Error al eliminar: ' + err.message);
@@ -57,7 +49,6 @@ const AdminTickets = () => {
     if (loading) return <Loading />;
     if (error) return <div className="text-center mt-10 text-red-600">Error: {error}</div>;
 
-    // 4. Filtramos los tickets en el frontend según el estado elegido
     const filteredTickets = filterStatus === 'all' 
         ? tickets 
         : tickets.filter(t => t.status === filterStatus);
@@ -66,8 +57,6 @@ const AdminTickets = () => {
         <div>
             <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold">Administrar Todos los Tickets</h2>
-                
-                {/* Selector de filtro */}
                 <div className="flex items-center gap-2">
                     <label className="text-sm font-medium">Filtrar por estado:</label>
                     <select 
@@ -97,9 +86,7 @@ const AdminTickets = () => {
                     <tbody className="divide-y divide-gray-100">
                         {filteredTickets.length === 0 ? (
                             <tr>
-                                <td colSpan="5" className="p-8 text-center text-gray-500 font-medium">
-                                    No hay tickets con este filtro.
-                                </td>
+                                <td colSpan="5" className="p-8 text-center text-gray-500 font-medium">No hay tickets con este filtro.</td>
                             </tr>
                         ) : (
                             filteredTickets.map((ticket) => (
@@ -112,6 +99,15 @@ const AdminTickets = () => {
                                     </td>
                                     <td className="p-4"><StatusBadge status={ticket.status} /></td>
                                     <td className="p-4 flex gap-3 items-center">
+                                        {/* BOTÓN NUEVO PARA IR AL CHAT */}
+                                        <Link 
+                                            to={`/tickets/${ticket.id}`} 
+                                            className="text-blue-600 hover:bg-blue-100 p-2 rounded-lg text-sm font-bold transition-colors" 
+                                            title="Ver / Responder"
+                                        >
+                                            💬
+                                        </Link>
+                                        
                                         <select 
                                             value={ticket.status}
                                             onChange={(e) => handleStatusChange(ticket.id, e.target.value)}

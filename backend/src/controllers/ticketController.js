@@ -1,4 +1,4 @@
-const { Ticket, User } = require('../models');
+const { Ticket, User, Mensaje } = require('../models');
 
 const createTicket = async (req, res) => {
     const { title, description } = req.body;
@@ -122,6 +122,74 @@ const deleteTicket = async (req, res) => {
     return res.status(204).send();
 };
 
-module.exports = { createTicket, listMyTickets, getAllTickets, getTicketById, updateTicket, changeTicketStatus, deleteTicket };
+const getMensajes = async (req, res) => {
+    const id = Number(req.params.id);
+    const ticket = await Ticket.findByPk(id);
+    if (!ticket) return res.status(404).json({ error: 'Ticket no encontrado' });
 
+    const isOwner = ticket.userId === req.user.id;
+    const isAdmin = req.user.role === 'admin';
+    if (!isOwner && !isAdmin) return res.status(404).json({ error: 'Ticket no encontrado' });
+
+    const mensajes = await Mensaje.findAll({
+        where: { ticketId: id },
+        include: [{ model: User, attributes: ['name', 'role'] }],
+        order: [['createdAt', 'ASC']]
+    });
+    res.json(mensajes);
+};
+
+const createMensaje = async (req, res) => {
+    const id = Number(req.params.id);
+    const { texto } = req.body;
+    if (!texto || texto.trim() === '') return res.status(400).json({ error: 'El mensaje no puede estar vacío' });
+
+    const ticket = await Ticket.findByPk(id);
+    if (!ticket) return res.status(404).json({ error: 'Ticket no encontrado' });
+
+    const isOwner = ticket.userId === req.user.id;
+    const isAdmin = req.user.role === 'admin';
+    if (!isOwner && !isAdmin) return res.status(404).json({ error: 'Ticket no encontrado' });
+    if (ticket.status === 'closed') return res.status(403).json({ error: 'El ticket está cerrado' });
+
+    // Si el admin responde y el ticket estaba abierto, lo pasamos a "En proceso"
+    if (isAdmin && ticket.status === 'open') {
+        await ticket.update({ status: 'in_progress' });
+    }
+
+    const nuevoMensaje = await Mensaje.create({
+        texto,
+        ticketId: id,
+        userId: req.user.id
+    });
+
+    // Devolvemos el mensaje con los datos del autor para actualizar el frontend
+    const mensajeConAutor = await Mensaje.findByPk(nuevoMensaje.id, {
+        include: [{ model: User, attributes: ['name', 'role'] }]
+    });
+
+    res.status(201).json(mensajeConAutor);
+};
+
+const cerrarTicket = async (req, res) => {
+    const id = Number(req.params.id);
+    const ticket = await Ticket.findByPk(id);
+    if (!ticket) return res.status(404).json({ error: 'Ticket no encontrado' });
+
+    const isOwner = ticket.userId === req.user.id;
+    const isAdmin = req.user.role === 'admin';
+    if (!isOwner && !isAdmin) return res.status(404).json({ error: 'Ticket no encontrado' });
+
+    if (ticket.status === 'closed') {
+        return res.status(400).json({ error: 'El ticket ya está cerrado' });
+    }
+
+    await ticket.update({ status: 'closed' });
+    res.json(ticket);
+};
+
+module.exports = { 
+    createTicket, listMyTickets, getAllTickets, getTicketById, updateTicket, changeTicketStatus, deleteTicket,
+    getMensajes, createMensaje, cerrarTicket 
+};
 

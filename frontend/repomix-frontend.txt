@@ -1,0 +1,1667 @@
+This file is a merged representation of a subset of the codebase, containing files not matching ignore patterns, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching these patterns are excluded: node_modules/**, dist/**, build/**, .git/**, .env*, *.lock, package-lock.json, yarn.lock, pnpm-lock.yaml, coverage/**, .vscode/**, .idea/**
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+public/
+  favicon.svg
+  icons.svg
+src/
+  api/
+    client.js
+  assets/
+    hero.png
+    react.svg
+    vite.svg
+  components/
+    Footer.jsx
+    Loading.jsx
+    Navbar.jsx
+    ProtectedRoute.jsx
+    StatusBadge.jsx
+  context/
+    AuthContext.jsx
+  data/
+    products.js
+    slides.js
+  pages/
+    AdminTickets.jsx
+    AdminUsers.jsx
+    Home.jsx
+    Login.jsx
+    MyTickets.jsx
+    NewTicket.jsx
+    NotFound.jsx
+    Products.jsx
+    Register.jsx
+    TicketDetail.jsx
+  App.jsx
+  index.css
+  main.jsx
+.gitignore
+eslint.config.js
+index.html
+package.json
+README.md
+vercel.json
+vite.config.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="public/favicon.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46"><path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" style="fill:#863bff;fill:color(display-p3 .5252 .23 1);fill-opacity:1"/><mask id="a" width="48" height="46" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M25.842 44.938c-.664.844-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.183c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.498 0-3.579-1.842-3.579H1.133c-.92 0-1.456-1.04-.92-1.787L9.91.473c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.578 1.842 3.578h11.377c.943 0 1.473 1.088.89 1.832L25.843 44.94z" style="fill:#000;fill-opacity:1"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#ede6ff" rx="5.508" ry="14.704" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -4.47 31.516)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#ede6ff" rx="10.399" ry="29.851" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -39.328 7.883)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#7e14ff" rx="5.508" ry="30.487" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -25.913 -14.639)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -32.644 -3.334)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -34.34 30.47)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#ede6ff" rx="14.072" ry="22.078" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="rotate(93.35 24.506 48.493)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx=".387" cy="8.972" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(39.51 .387 8.972)"/></g><g filter="url(#k)"><ellipse cx="47.523" cy="-6.092" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 47.523 -6.092)"/></g><g filter="url(#l)"><ellipse cx="41.412" cy="6.333" fill="#47bfff" rx="5.971" ry="9.665" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 41.412 6.333)"/></g><g filter="url(#m)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#n)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#o)"><ellipse cx="35.651" cy="29.907" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 35.651 29.907)"/></g><g filter="url(#p)"><ellipse cx="38.418" cy="32.4" fill="#47bfff" rx="5.971" ry="15.297" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 38.418 32.4)"/></g></g><defs><filter id="b" width="60.045" height="41.654" x="-19.77" y="16.149" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-54.613" y="-7.533" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-49.64" y="2.03" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-45.045" y="20.029" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-43.513" y="21.178" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="15.756" y="-17.901" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-27.636" y="-22.853" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="20.116" y="-38.415" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="24.641" y="-11.323" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="8.244" y="-2.416" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="18.713" y="10.588" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter></defs></svg>
+</file>
+
+<file path="public/icons.svg">
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="bluesky-icon" viewBox="0 0 16 17">
+    <g clip-path="url(#bluesky-clip)"><path fill="#08060d" d="M7.75 7.735c-.693-1.348-2.58-3.86-4.334-5.097-1.68-1.187-2.32-.981-2.74-.79C.188 2.065.1 2.812.1 3.251s.241 3.602.398 4.13c.52 1.744 2.367 2.333 4.07 2.145-2.495.37-4.71 1.278-1.805 4.512 3.196 3.309 4.38-.71 4.987-2.746.608 2.036 1.307 5.91 4.93 2.746 2.72-2.746.747-4.143-1.747-4.512 1.702.189 3.55-.4 4.07-2.145.156-.528.397-3.691.397-4.13s-.088-1.186-.575-1.406c-.42-.19-1.06-.395-2.741.79-1.755 1.24-3.64 3.752-4.334 5.099"/></g>
+    <defs><clipPath id="bluesky-clip"><path fill="#fff" d="M.1.85h15.3v15.3H.1z"/></clipPath></defs>
+  </symbol>
+  <symbol id="discord-icon" viewBox="0 0 20 19">
+    <path fill="#08060d" d="M16.224 3.768a14.5 14.5 0 0 0-3.67-1.153c-.158.286-.343.67-.47.976a13.5 13.5 0 0 0-4.067 0c-.128-.306-.317-.69-.476-.976A14.4 14.4 0 0 0 3.868 3.77C1.546 7.28.916 10.703 1.231 14.077a14.7 14.7 0 0 0 4.5 2.306q.545-.748.965-1.587a9.5 9.5 0 0 1-1.518-.74q.191-.14.372-.293c2.927 1.369 6.107 1.369 8.999 0q.183.152.372.294-.723.437-1.52.74.418.838.963 1.588a14.6 14.6 0 0 0 4.504-2.308c.37-3.911-.63-7.302-2.644-10.309m-9.13 8.234c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.894 0 1.614.82 1.599 1.82.001 1-.705 1.82-1.6 1.82m5.91 0c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.893 0 1.614.82 1.599 1.82 0 1-.706 1.82-1.6 1.82"/>
+  </symbol>
+  <symbol id="documentation-icon" viewBox="0 0 21 20">
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="m15.5 13.333 1.533 1.322c.645.555.967.833.967 1.178s-.322.623-.967 1.179L15.5 18.333m-3.333-5-1.534 1.322c-.644.555-.966.833-.966 1.178s.322.623.966 1.179l1.534 1.321"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M17.167 10.836v-4.32c0-1.41 0-2.117-.224-2.68-.359-.906-1.118-1.621-2.08-1.96-.599-.21-1.349-.21-2.848-.21-2.623 0-3.935 0-4.983.369-1.684.591-3.013 1.842-3.641 3.428C3 6.449 3 7.684 3 10.154v2.122c0 2.558 0 3.838.706 4.726q.306.383.713.671c.76.536 1.79.64 3.581.66"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M3 10a2.78 2.78 0 0 1 2.778-2.778c.555 0 1.209.097 1.748-.047.48-.129.854-.503.982-.982.145-.54.048-1.194.048-1.749a2.78 2.78 0 0 1 2.777-2.777"/>
+  </symbol>
+  <symbol id="github-icon" viewBox="0 0 19 19">
+    <path fill="#08060d" fill-rule="evenodd" d="M9.356 1.85C5.05 1.85 1.57 5.356 1.57 9.694a7.84 7.84 0 0 0 5.324 7.44c.387.079.528-.168.528-.376 0-.182-.013-.805-.013-1.454-2.165.467-2.616-.935-2.616-.935-.349-.91-.864-1.143-.864-1.143-.71-.48.051-.48.051-.48.787.051 1.2.805 1.2.805.695 1.194 1.817.857 2.268.649.064-.507.27-.857.49-1.052-1.728-.182-3.545-.857-3.545-3.87 0-.857.31-1.558.8-2.104-.078-.195-.349-1 .077-2.078 0 0 .657-.208 2.14.805a7.5 7.5 0 0 1 1.946-.26c.657 0 1.328.092 1.946.26 1.483-1.013 2.14-.805 2.14-.805.426 1.078.155 1.883.078 2.078.502.546.799 1.247.799 2.104 0 3.013-1.818 3.675-3.558 3.87.284.247.528.714.528 1.454 0 1.052-.012 1.896-.012 2.156 0 .208.142.455.528.377a7.84 7.84 0 0 0 5.324-7.441c.013-4.338-3.48-7.844-7.773-7.844" clip-rule="evenodd"/>
+  </symbol>
+  <symbol id="social-icon" viewBox="0 0 20 20">
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M12.5 6.667a4.167 4.167 0 1 0-8.334 0 4.167 4.167 0 0 0 8.334 0"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M2.5 16.667a5.833 5.833 0 0 1 8.75-5.053m3.837.474.513 1.035c.07.144.257.282.414.309l.93.155c.596.1.736.536.307.965l-.723.73a.64.64 0 0 0-.152.531l.207.903c.164.715-.213.991-.84.618l-.872-.52a.63.63 0 0 0-.577 0l-.872.52c-.624.373-1.003.094-.84-.618l.207-.903a.64.64 0 0 0-.152-.532l-.723-.729c-.426-.43-.289-.864.306-.964l.93-.156a.64.64 0 0 0 .412-.31l.513-1.034c.28-.562.735-.562 1.012 0"/>
+  </symbol>
+  <symbol id="x-icon" viewBox="0 0 19 19">
+    <path fill="#08060d" fill-rule="evenodd" d="M1.893 1.98c.052.072 1.245 1.769 2.653 3.77l2.892 4.114c.183.261.333.48.333.486s-.068.089-.152.183l-.522.593-.765.867-3.597 4.087c-.375.426-.734.834-.798.905a1 1 0 0 0-.118.148c0 .01.236.017.664.017h.663l.729-.83c.4-.457.796-.906.879-.999a692 692 0 0 0 1.794-2.038c.034-.037.301-.34.594-.675l.551-.624.345-.392a7 7 0 0 1 .34-.374c.006 0 .93 1.306 2.052 2.903l2.084 2.965.045.063h2.275c1.87 0 2.273-.003 2.266-.021-.008-.02-1.098-1.572-3.894-5.547-2.013-2.862-2.28-3.246-2.273-3.266.008-.019.282-.332 2.085-2.38l2-2.274 1.567-1.782c.022-.028-.016-.03-.65-.03h-.674l-.3.342a871 871 0 0 1-1.782 2.025c-.067.075-.405.458-.75.852a100 100 0 0 1-.803.91c-.148.172-.299.344-.99 1.127-.304.343-.32.358-.345.327-.015-.019-.904-1.282-1.976-2.808L6.365 1.85H1.8zm1.782.91 8.078 11.294c.772 1.08 1.413 1.973 1.425 1.984.016.017.241.02 1.05.017l1.03-.004-2.694-3.766L7.796 5.75 5.722 2.852l-1.039-.004-1.039-.004z" clip-rule="evenodd"/>
+  </symbol>
+</svg>
+</file>
+
+<file path="src/api/client.js">
+const API_URL = import.meta.env.VITE_API_URL;
+
+export const api = async (endpoint, options = {}) => {
+    // 1. Buscamos el token en el localStorage
+    const token = localStorage.getItem('token');
+
+    // 2. Armamos los headers
+    const headers = {
+        'Content-Type': 'application/json',
+        ...options.headers,
+    };
+
+    // Si hay token, lo agregamos al header Authorization
+    if (token) {
+        headers['Authorization'] = `Bearer ${token}`;
+    }
+
+    // 3. Hacemos el fetch (igual que en vanilla JS)
+    const response = await fetch(`${API_URL}${endpoint}`, {
+        ...options,
+        headers,
+    });
+
+    // 4. Manejo de error 401 (Sesión expirada)
+    if (response.status === 401 && endpoint !== '/auth/login') {
+        // Si falla, limpiamos todo y recargamos la página para ir al login
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        window.location.href = '/login'; 
+        return;
+    }
+
+    // 5. Manejo de errores normales (400, 403, 404, etc)
+    if (!response.ok) {
+        // Si el backend devuelve un JSON con { error: "..." }, lo leemos
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || 'Error en la petición');
+    }
+
+    // 6. Si todo está bien (200, 201, etc.), devolvemos el JSON
+    // Si es un 204 (No Content), no hay JSON que leer
+    if (response.status === 204) return null;
+    
+    return response.json();
+};
+
+// --- Inventario ---
+export const getItems = () => api('/items');
+export const createItem = (item) => api('/items', { method: 'POST', body: JSON.stringify(item) });
+export const updateItem = (id, campo, valor) => api(`/items/${id}`, { method: 'PATCH', body: JSON.stringify({ campo, valor }) });
+export const deleteItem = (id) => api(`/items/${id}`, { method: 'DELETE' });
+export const getPerfil = () => api('/perfil');
+
+// --- Agenda ---
+export const getCategorias = () => api('/agenda/categorias');
+export const createCategoria = (data) => api('/agenda/categorias', { method: 'POST', body: JSON.stringify(data) });
+export const updateCategoria = (id, data) => api(`/agenda/categorias/${id}`, { method: 'PUT', body: JSON.stringify(data) });
+export const deleteCategoria = (id) => api(`/agenda/categorias/${id}`, { method: 'DELETE' });
+
+export const getContactos = () => api('/agenda/contactos');
+export const createContacto = (data) => api('/agenda/contactos', { method: 'POST', body: JSON.stringify(data) });
+export const updateContacto = (id, data) => api(`/agenda/contactos/${id}`, { method: 'PUT', body: JSON.stringify(data) });
+export const deleteContacto = (id) => api(`/agenda/contactos/${id}`, { method: 'DELETE' });
+</file>
+
+<file path="src/assets/react.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228"><path fill="#00D8FF" d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z"></path></svg>
+</file>
+
+<file path="src/assets/vite.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
+</file>
+
+<file path="src/components/Footer.jsx">
+import { Link } from 'react-router-dom';
+
+const Footer = () => {
+    const currentDate = new Date().toLocaleDateString('es-AR', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+
+    return (
+        <footer className="bg-slate-900 text-slate-300 mt-auto w-full border-t border-slate-800">
+            {/* Redujimos py-10 a py-6 */}
+            <div className="container mx-auto px-6 py-6">
+                
+                {/* Grid: 1 columna en celular (marca), 2 en tablets, 4 en PC */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    
+                    {/* Marca: ocupa 2 columnas en celular (ancho completo) y 2 en PC */}
+                    <div className="col-span-2">
+                        <Link to="/" className="text-xl font-bold text-white flex items-center gap-2 mb-2 hover:text-blue-400 transition-colors w-fit">
+                            🛠️ Soporte Técnico
+                        </Link>
+                        <p className="text-xs md:text-sm text-slate-400 leading-relaxed max-w-sm">
+                            Soluciones informáticas rápidas y eficientes para que tus problemas no frenen tu día a día.
+                        </p>
+                    </div>
+
+                    {/* Links: ocupa 1 columna en celular y 1 en PC */}
+                    <div>
+                        <h4 className="text-white text-sm font-semibold mb-3">Enlaces</h4>
+                        <ul className="space-y-2 text-xs md:text-sm">
+                            <li>
+                                <Link to="/" className="hover:text-blue-400 transition-colors">Inicio</Link>
+                            </li>
+                            <li>
+                                <Link to="/products" className="hover:text-blue-400 transition-colors">Servicios</Link>
+                            </li>
+                            <li>
+                                <Link to="/login" className="hover:text-blue-400 transition-colors">Acceso Clientes</Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Contacto: ocupa 1 columna en celular y 1 en PC */}
+                    <div>
+                        <h4 className="text-white text-sm font-semibold mb-3">Contacto</h4>
+                        <ul className="space-y-2 text-xs md:text-sm text-slate-400">
+                            <li className="flex items-center gap-2">
+                                <span>✉️</span> leogon581@gmail.com
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span>📍</span> Santa Fe, AR
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span>🕒</span> Lun - Vie: 9 a 18h
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Línea divisoria y Copyright - Redujimos los márgenes superiores */}
+                <div className="border-t border-slate-800 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center text-[11px] md:text-xs text-slate-500 gap-3">
+                    <p className="text-center md:text-left">© {new Date().getFullYear()} Sistema de Tickets. Todos los derechos reservados.</p>
+                    
+                    <div className="flex items-center gap-2 bg-slate-800 px-3 py-1 rounded-full">
+                        <span>📅</span>
+                        <span className="font-medium text-slate-300">{currentDate}</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;
+</file>
+
+<file path="src/components/Loading.jsx">
+const Loading = () => {
+    return (
+        <div className="flex justify-center items-center mt-20">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        </div>
+    );
+};
+
+export default Loading;
+</file>
+
+<file path="src/components/Navbar.jsx">
+import { NavLink, Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+
+const Navbar = () => {
+    const { user, logout, isAdmin } = useAuth();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        logout();
+        navigate('/login');
+    };
+
+    const navLinkClass = ({ isActive }) => 
+        `px-3 py-2 rounded transition-colors duration-200 ${
+            isActive ? 'bg-blue-600 text-white font-bold' : 'hover:bg-gray-700 text-gray-200'
+        }`;
+
+    return (
+        <nav className="bg-gray-800 shadow-md sticky top-0 z-50">
+            <div className="container mx-auto px-4 py-2 flex justify-between items-center flex-wrap gap-4">
+                
+                {/* LOGO Y NAVEGACIÓN */}
+                <div className="flex gap-4 items-center">
+                    <Link to="/" className="text-xl font-extrabold text-white flex items-center gap-2 mr-4 hover:text-blue-400 transition-colors">
+                        🛠️ Soporte Técnico
+                    </Link>
+
+                    <div className="flex gap-2 items-center border-l border-gray-600 pl-4">
+                        <NavLink to="/" end className={navLinkClass}>Inicio</NavLink>
+                        <NavLink to="/products" className={navLinkClass}>Productos</NavLink>
+                    </div>
+                </div>
+
+                {/* OPCIONES DE USUARIO */}
+                <div className="flex gap-2 items-center flex-wrap">
+                    {!user && (
+                        <>
+                            <NavLink to="/login" className={navLinkClass}>Login</NavLink>
+                            <NavLink to="/register" className={navLinkClass}>Registro</NavLink>
+                        </>
+                    )}
+
+                    {user && (
+                        <>
+                            <NavLink to="/tickets" end className={navLinkClass}>Mis tickets</NavLink>
+                            <NavLink to="/tickets/new" className={navLinkClass}>Nuevo ticket</NavLink>
+                    
+                            {isAdmin && (
+                                <>
+                                    <NavLink to="/admin/tickets" className={navLinkClass}>Admin Tickets</NavLink>
+                                    <NavLink to="/admin/users" className={navLinkClass}>Admin Usuarios</NavLink>
+                                </>
+                            )}
+
+                            <span className="text-sm text-gray-400 ml-4 border-l border-gray-600 pl-4">
+                                Hola, <span className="font-bold text-white">{user.name}</span>
+                            </span>
+                            <button onClick={handleLogout} className="bg-red-600 text-white px-3 py-2 rounded hover:bg-red-700 transition-colors">
+                                Cerrar sesión
+                            </button>
+                        </>
+                    )}
+                </div>
+            </div>
+        </nav>
+    );
+};
+
+export default Navbar;
+</file>
+
+<file path="src/components/ProtectedRoute.jsx">
+import { Navigate, Outlet } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+
+const ProtectedRoute = ({ requireAdmin = false }) => {
+    // Traemos los datos del contexto global
+    const { user, loading, isAdmin } = useAuth();
+
+    // 1. Si React todavía está chequeando la sesión en localStorage, mostramos esto
+    if (loading) {
+        return <div className="text-center mt-10">Cargando sesión...</div>;
+    }
+
+    // 2. Si no hay usuario, lo pateamos al login
+    if (!user) {
+        return <Navigate to="/login" replace />;
+    }
+
+    // 3. Si la ruta pide admin y el usuario es común, lo pateamos al inicio
+    if (requireAdmin && !isAdmin) {
+        return <Navigate to="/" replace />;
+    }
+
+    // 4. Si pasó todo, el <Outlet /> muestra la página que quería ver
+    return <Outlet />;
+};
+
+export default ProtectedRoute;
+</file>
+
+<file path="src/components/StatusBadge.jsx">
+const StatusBadge = ({ status }) => {
+    // Diccionario de colores según el estado
+    const styles = {
+        open: 'bg-green-100 text-green-800',
+        in_progress: 'bg-yellow-100 text-yellow-800',
+        closed: 'bg-red-100 text-red-800',
+    };
+
+    const labels = {
+        open: 'Abierto',
+        in_progress: 'En proceso',
+        closed: 'Cerrado',
+    };
+
+    return (
+        <span className={`px-2 py-1 rounded-full text-xs font-bold ${styles[status] || 'bg-gray-100'}`}>
+            {labels[status] || status}
+        </span>
+    );
+};
+
+export default StatusBadge;
+</file>
+
+<file path="src/context/AuthContext.jsx">
+import { createContext, useContext, useState, useEffect } from 'react';
+import { api } from '../api/client';
+
+// 1. Creamos el contexto
+const AuthContext = createContext();
+
+// 2. Creamos el "Proveedor" (el que envuelve a toda la app)
+export const AuthProvider = ({ children }) => {
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true); // Para saber si estamos cargando la sesión inicial
+
+    // Función para iniciar sesión
+    const login = async (email, password) => {
+        const data = await api('/auth/login', {
+            method: 'POST',
+            body: JSON.stringify({ email, password }),
+        });
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('user', JSON.stringify(data.user));
+        setUser(data.user);
+        return data.user;
+    };
+
+    // Función para registrarse
+    const register = async (name, email, password) => {
+        const data = await api('/auth/register', {
+            method: 'POST',
+            body: JSON.stringify({ name, email, password }),
+        });
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('user', JSON.stringify(data.user));
+        setUser(data.user);
+        return data.user;
+    };
+
+    // Función para cerrar sesión
+    const logout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        setUser(null);
+    };
+
+    // Al cargar la página por primera vez, verificamos si hay sesión
+    useEffect(() => {
+        const checkSession = async () => {
+            const token = localStorage.getItem('token');
+            const savedUser = localStorage.getItem('user');
+
+            if (token && savedUser) {
+                // Si hay token, confiamos en el usuario guardado por ahora
+                setUser(JSON.parse(savedUser));
+                
+                // Y en segundo plano preguntamos al backend si el token sigue vivo
+                try {
+                    const data = await api('/auth/me');
+                    setUser(data.user);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                } catch (error) {
+                    // Si el token expiró, el api/client.js ya lo va a desloguear
+                    console.error('Sesión expirada');
+                }
+            }
+            setLoading(false); // Terminó la carga inicial
+        };
+
+        checkSession();
+    }, []); // El array vacío [] significa que esto corre solo una vez
+
+    // 3. Lo que vamos a compartir con toda la app
+    const value = {
+        user,
+        loading,
+        login,
+        register,
+        logout,
+        isAuthenticated: !!user, // true si user no es null
+        isAdmin: user?.role === 'admin', // true si el rol es admin
+    };
+
+    return (
+        <AuthContext.Provider value={value}>
+            {!loading && children}
+        </AuthContext.Provider>
+    );
+};
+
+// 4. Un Hook personalizado para usar el contexto más fácil
+export const useAuth = () => {
+    return useContext(AuthContext);
+};
+</file>
+
+<file path="src/data/products.js">
+export const products = [
+    {
+        id: 1,
+        name: "Mantenimiento Preventivo",
+        description: "Limpieza de hardware, actualización de software y revisión general.",
+        price: "$50",
+        image: "https://images.unsplash.com/photo-1588702547919-26089e690ecc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 2,
+        name: "Recuperación de Datos",
+        description: "Recuperamos tus archivos importantes de discos dañados.",
+        price: "$120",
+        image: "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 3,
+        name: "Instalación de Redes",
+        description: "Configuración de redes cableadas e inalámbricas para oficinas.",
+        price: "$200",
+        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 4,
+        name: "Soporte Remoto",
+        description: "Asistencia técnica a distancia para resolver problemas al instante.",
+        price: "$30",
+        image: "https://images.unsplash.com/photo-1521898284481-a5ec348cb555?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    }
+];
+</file>
+
+<file path="src/data/slides.js">
+export const slides = [
+    {
+        id: 1,
+        title: "Soporte Técnico de Excelencia",
+        description: "Resolvemos tus problemas informáticos de manera rápida y eficiente.",
+        image: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" // Imagen de laptop reparada
+    },
+    {
+        id: 2,
+        title: "Gestión de Tickets Simplificada",
+        description: "Reportá incidentes y seguí su estado en tiempo real.",
+        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" // Imagen de equipo trabajando
+    },
+    {
+        id: 3,
+        title: "Atención Personalizada",
+        description: "Nuestro equipo de expertos está listo para ayudarte.",
+        image: "https://images.unsplash.com/photo-1553775282-20af80779df7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" // Imagen de atención al cliente
+    }
+];
+</file>
+
+<file path="src/pages/AdminTickets.jsx">
+import { useState, useEffect } from 'react';
+import { api } from '../api/client';
+import StatusBadge from '../components/StatusBadge';
+import Loading from '../components/Loading';
+
+const AdminTickets = () => {
+    const [tickets, setTickets] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+    
+    // Estado para el filtro
+    const [filterStatus, setFilterStatus] = useState('all');
+
+    // 1. Traemos TODOS los tickets
+    useEffect(() => {
+        const fetchAllTickets = async () => {
+            try {
+                const data = await api('/tickets/all');
+                setTickets(data);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchAllTickets();
+    }, []);
+
+    // 2. Función para cambiar el estado de un ticket (PATCH)
+    const handleStatusChange = async (id, newStatus) => {
+        try {
+            const updated = await api(`/tickets/${id}/status`, {
+                method: 'PATCH',
+                body: JSON.stringify({ status: newStatus })
+            });
+            
+            // Actualizamos la lista local con el ticket modificado
+            setTickets(tickets.map(t => t.id === id ? { ...t, status: updated.status } : t));
+        } catch (err) {
+            alert('Error al cambiar estado: ' + err.message);
+        }
+    };
+
+    // 3. Función para eliminar un ticket (DELETE)
+    const handleDelete = async (id) => {
+        if (!window.confirm('¿Seguro que querés eliminar este ticket definitivamente?')) return;
+        
+        try {
+            await api(`/tickets/${id}`, { method: 'DELETE' });
+            // Lo sacamos de la lista local
+            setTickets(tickets.filter(t => t.id !== id));
+        } catch (err) {
+            alert('Error al eliminar: ' + err.message);
+        }
+    };
+
+    if (loading) return <Loading />;
+    if (error) return <div className="text-center mt-10 text-red-600">Error: {error}</div>;
+
+    // 4. Filtramos los tickets en el frontend según el estado elegido
+    const filteredTickets = filterStatus === 'all' 
+        ? tickets 
+        : tickets.filter(t => t.status === filterStatus);
+
+    return (
+        <div>
+            <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-bold">Administrar Todos los Tickets</h2>
+                
+                {/* Selector de filtro */}
+                <div className="flex items-center gap-2">
+                    <label className="text-sm font-medium">Filtrar por estado:</label>
+                    <select 
+                        value={filterStatus} 
+                        onChange={(e) => setFilterStatus(e.target.value)}
+                        className="border p-2 rounded bg-white text-sm"
+                    >
+                        <option value="all">Todos</option>
+                        <option value="open">Abiertos</option>
+                        <option value="in_progress">En proceso</option>
+                        <option value="closed">Cerrados</option>
+                    </select>
+                </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <table className="w-full text-left border-collapse">
+                    <thead>
+                        <tr className="bg-gray-800 text-white text-xs uppercase tracking-wider">
+                            <th className="p-4 font-semibold">ID</th>
+                            <th className="p-4 font-semibold">Título</th>
+                            <th className="p-4 font-semibold">Creador</th>
+                            <th className="p-4 font-semibold">Estado</th>
+                            <th className="p-4 font-semibold">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                        {filteredTickets.length === 0 ? (
+                            <tr>
+                                <td colSpan="5" className="p-8 text-center text-gray-500 font-medium">
+                                    No hay tickets con este filtro.
+                                </td>
+                            </tr>
+                        ) : (
+                            filteredTickets.map((ticket) => (
+                                <tr key={ticket.id} className="hover:bg-blue-50/50 transition-colors even:bg-gray-50/50">
+                                    <td className="p-4 font-bold text-gray-400">#{ticket.id}</td>
+                                    <td className="p-4 font-bold text-gray-800">{ticket.title}</td>
+                                    <td className="p-4 text-sm">
+                                        <div className="font-bold text-gray-700">{ticket.User.name}</div>
+                                        <div className="text-gray-500">{ticket.User.email}</div>
+                                    </td>
+                                    <td className="p-4"><StatusBadge status={ticket.status} /></td>
+                                    <td className="p-4 flex gap-3 items-center">
+                                        <select 
+                                            value={ticket.status}
+                                            onChange={(e) => handleStatusChange(ticket.id, e.target.value)}
+                                            className="border border-gray-300 p-1.5 rounded-lg text-sm bg-white focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer"
+                                        >
+                                            <option value="open">Abierto</option>
+                                            <option value="in_progress">En proceso</option>
+                                            <option value="closed">Cerrado</option>
+                                        </select>
+                                        <button 
+                                            onClick={() => handleDelete(ticket.id)}
+                                            className="text-red-600 hover:bg-red-100 p-2 rounded-lg text-sm font-bold transition-colors"
+                                            title="Eliminar"
+                                        >
+                                            ✖
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))
+                        )}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    );
+};
+
+export default AdminTickets;
+</file>
+
+<file path="src/pages/AdminUsers.jsx">
+import { useState, useEffect } from 'react';
+import { api } from '../api/client';
+import { useAuth } from '../context/AuthContext';
+import Loading from '../components/Loading';
+
+const AdminUsers = () => {
+    const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+    
+    // Necesitamos saber quién es el admin logueado para bloquear su propio selector
+    const { user: currentUser } = useAuth();
+
+    // 1. Traemos todos los usuarios
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const data = await api('/users');
+                setUsers(data);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchUsers();
+    }, []);
+
+    // 2. Función para cambiar el rol
+    const handleRoleChange = async (id, newRole) => {
+        try {
+            await api(`/users/${id}/role`, {
+                method: 'PATCH',
+                body: JSON.stringify({ role: newRole })
+            });
+            
+            // Actualizamos la lista local
+            setUsers(users.map(u => u.id === id ? { ...u, role: newRole } : u));
+        } catch (err) {
+            alert('Error al cambiar rol: ' + err.message);
+        }
+    };
+
+    if (loading) return <Loading />;
+    if (error) return <div className="text-center mt-10 text-red-600">Error: {error}</div>;
+
+    return (
+        <div>
+            <h2 className="text-2xl font-bold mb-6">Administrar Usuarios</h2>
+
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <table className="w-full text-left border-collapse">
+                    <thead>
+                        <tr className="bg-gray-800 text-white text-xs uppercase tracking-wider">
+                            <th className="p-4 font-semibold">ID</th>
+                            <th className="p-4 font-semibold">Nombre</th>
+                            <th className="p-4 font-semibold">Email</th>
+                            <th className="p-4 font-semibold">Rol</th>
+                            <th className="p-4 font-semibold">Cambiar Rol</th>
+                        </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                        {users.map((u) => {
+                            const isSelf = u.id === currentUser.id;
+                            return (
+                                <tr key={u.id} className={`hover:bg-blue-50/50 transition-colors even:bg-gray-50/50 ${isSelf ? 'bg-blue-50/30' : ''}`}>
+                                    <td className="p-4 font-bold text-gray-400">#{u.id}</td>
+                                    <td className="p-4 font-bold text-gray-800">
+                                        {u.name} {isSelf && <span className="text-xs text-blue-600 ml-2 bg-blue-100 px-2 py-0.5 rounded-full">(Vos)</span>}
+                                    </td>
+                                    <td className="p-4 text-sm text-gray-600">{u.email}</td>
+                                    <td className="p-4">
+                                        <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide ${u.role === 'admin' ? 'bg-purple-100 text-purple-800' : 'bg-gray-100 text-gray-800'}`}>
+                                            {u.role}
+                                        </span>
+                                    </td>
+                                    <td className="p-4">
+                                        <select 
+                                            value={u.role}
+                                            onChange={(e) => handleRoleChange(u.id, e.target.value)}
+                                            disabled={isSelf}
+                                            className={`border border-gray-300 p-1.5 rounded-lg text-sm bg-white focus:ring-2 focus:ring-blue-500 outline-none ${isSelf ? 'opacity-50 cursor-not-allowed bg-gray-100' : 'cursor-pointer'}`}
+                                        >
+                                            <option value="user">Usuario</option>
+                                            <option value="admin">Administrador</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            );
+                        })}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    );
+};
+
+export default AdminUsers;
+</file>
+
+<file path="src/pages/Home.jsx">
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { slides } from '../data/slides';
+
+const Home = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 5000); // Un poquito más lento para que se pueda leer
+        return () => clearInterval(timer);
+    }, []);
+
+    return (
+        <div className="space-y-12">
+            {/* 1. Carrusel Mejorado */}
+            <div 
+                className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 bg-cover bg-center"
+                style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
+            >
+                {/* Capa oscura para que el texto sea legible */}
+                <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white text-center p-6">
+                    <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
+                        {slides[currentSlide].title}
+                    </h1>
+                    <p className="text-lg md:text-2xl font-medium mb-8 max-w-2xl drop-shadow-md">
+                        {slides[currentSlide].description}
+                    </p>
+                    <div className="flex gap-4">
+                        <Link to="/register" className="bg-white text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                            Empezar ahora
+                        </Link>
+                        <Link to="/products" className="bg-transparent border-2 border-white px-6 py-3 rounded-full font-bold hover:bg-white/20 transition-colors shadow-lg">
+                            Ver servicios
+                        </Link>
+                    </div>
+                </div>
+                
+                {/* Indicadores del carrusel */}
+                <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3">
+                    {slides.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrentSlide(index)}
+                            className={`w-3 h-3 rounded-full transition-all ${index === currentSlide ? 'bg-white w-8' : 'bg-white/50 hover:bg-white/80'}`}
+                        />
+                    ))}
+                </div>
+            </div>
+
+            {/* 2. Sección de Características (Nueva) */}
+            <div className="text-center max-w-4xl mx-auto">
+                <h2 className="text-3xl font-bold mb-4 text-gray-800">¿Por qué elegirnos?</h2>
+                <p className="text-gray-600 mb-10">Brindamos soluciones informáticas rápidas, seguras y adaptadas a tus necesidades.</p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div className="text-4xl mb-4">🚀</div>
+                        <h3 className="text-xl font-bold mb-2">Rápido y Eficiente</h3>
+                        <p className="text-gray-600 text-sm">Atendemos tus tickets en tiempo récord para que no frenes tus actividades.</p>
+                    </div>
+                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div className="text-4xl mb-4">🔧</div>
+                        <h3 className="text-xl font-bold mb-2">Soporte Especializado</h3>
+                        <p className="text-gray-600 text-sm">Contamos con expertos en hardware, software y redes listos para ayudarte.</p>
+                    </div>
+                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div className="text-4xl mb-4">💬</div>
+                        <h3 className="text-xl font-bold mb-2">Seguimiento en Vivo</h3>
+                        <p className="text-gray-600 text-sm">Mirá el estado de tu problema en todo momento desde tu panel de control.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Home;
+</file>
+
+<file path="src/pages/Login.jsx">
+import { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+
+const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const { login } = useAuth();
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError('');
+        setLoading(true);
+        try {
+            await login(email, password);
+            navigate('/tickets');
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
+        <div className="flex justify-center items-center min-h-[70vh]">
+            <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <div className="text-center mb-8">
+                    <h2 className="text-3xl font-extrabold text-gray-800">Bienvenido</h2>
+                    <p className="text-gray-500 mt-2">Ingresá a tu cuenta para gestionar tickets</p>
+                </div>
+                
+                {error && <div className="bg-red-50 text-red-600 p-3 rounded-lg mb-6 text-sm border border-red-100 text-center">{error}</div>}
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+                        <input 
+                            type="email" 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                            required 
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Contraseña</label>
+                        <input 
+                            type="password" 
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                            required 
+                        />
+                    </div>
+                    <button 
+                        type="submit" 
+                        disabled={loading}
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors disabled:opacity-50 shadow-md"
+                    >
+                        {loading ? 'Ingresando...' : 'Ingresar al sistema'}
+                    </button>
+                </form>
+
+                <p className="mt-6 text-center text-sm text-gray-600">
+                    ¿No tenés cuenta? <Link to="/register" className="text-blue-600 font-bold hover:underline">Registrate gratis</Link>
+                </p>
+            </div>
+        </div>
+    );
+};
+
+export default Login;
+</file>
+
+<file path="src/pages/MyTickets.jsx">
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { api } from '../api/client';
+import StatusBadge from '../components/StatusBadge';
+import Loading from '../components/Loading';
+
+const MyTickets = () => {
+    const [tickets, setTickets] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        const fetchTickets = async () => {
+            try {
+                const data = await api('/tickets');
+                setTickets(data);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchTickets();
+    }, []);
+
+    if (loading) return <Loading />;
+    if (error) return <div className="text-center mt-10 text-red-600 font-bold">{error}</div>;
+
+    if (tickets.length === 0) {
+        return (
+            <div className="text-center mt-10 bg-white p-10 rounded-2xl shadow-sm border border-gray-100 max-w-lg mx-auto">
+                <div className="text-6xl mb-4">🎉</div>
+                <h2 className="text-2xl font-extrabold mb-2 text-gray-800">¡Todo al día!</h2>
+                <p className="text-gray-500 mb-8">No tenés tickets pendientes. Si tenés algún problema, no dudes en reportarlo.</p>
+                <Link to="/tickets/new" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors shadow-md inline-block">
+                    + Crear nuevo ticket
+                </Link>
+            </div>
+        );
+    }
+
+    return (
+        <div className="max-w-4xl mx-auto">
+            <div className="flex justify-between items-center mb-8">
+                <div>
+                    <h2 className="text-3xl font-extrabold text-gray-800">Mis Tickets</h2>
+                    <p className="text-gray-500 mt-1">Gestioná tus reportes de soporte</p>
+                </div>
+                <Link to="/tickets/new" className="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-bold hover:bg-blue-700 transition-colors shadow-md flex items-center gap-2">
+                    <span className="text-xl">+</span> Nuevo Ticket
+                </Link>
+            </div>
+
+            <div className="space-y-4">
+                {tickets.map((ticket) => {
+                    // Elegimos el color del borde según el estado
+                    const borderColor = 
+                        ticket.status === 'open' ? 'border-l-green-500' :
+                        ticket.status === 'in_progress' ? 'border-l-yellow-500' : 
+                        'border-l-red-500';
+
+                    return (
+                        <div 
+                            key={ticket.id} 
+                            className={`bg-white p-5 rounded-xl shadow-sm border border-gray-100 border-l-4 ${borderColor} hover:shadow-md transition-shadow flex flex-col md:flex-row justify-between items-start md:items-center gap-4`}
+                        >
+                            <div className="flex-grow">
+                                <h3 className="font-bold text-lg text-gray-800 flex items-center gap-2">
+                                    <span className="text-gray-400 font-mono text-sm bg-gray-100 px-2 py-0.5 rounded">#{ticket.id}</span>
+                                    {ticket.title}
+                                </h3>
+                                <p className="text-sm text-gray-500 mt-2 flex items-center gap-1">
+                                    📅 Reportado el {new Date(ticket.createdAt).toLocaleDateString('es-AR')}
+                                </p>
+                            </div>
+                            
+                            <div className="flex items-center gap-6 w-full md:w-auto justify-between md:justify-end mt-2 md:mt-0">
+                                <StatusBadge status={ticket.status} />
+                                <Link 
+                                    to={`/tickets/${ticket.id}`} 
+                                    className="bg-gray-50 text-gray-700 px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-200 hover:text-gray-900 transition-colors border border-gray-200"
+                                >
+                                    Ver detalle →
+                                </Link>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
+
+export default MyTickets;
+</file>
+
+<file path="src/pages/NewTicket.jsx">
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { api } from '../api/client';
+
+const NewTicket = () => {
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError('');
+        setLoading(true);
+        try {
+            await api('/tickets', {
+                method: 'POST',
+                body: JSON.stringify({ title, description }),
+            });
+            navigate('/tickets');
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
+        <div className="max-w-2xl mx-auto mt-8 bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+            <h2 className="text-2xl font-extrabold text-gray-800 mb-2">Reportar un Problema</h2>
+            <p className="text-gray-500 mb-8">Describí tu problema con el mayor detalle posible para que podamos ayudarte rápido.</p>
+            
+            {error && <div className="bg-red-50 text-red-600 p-3 rounded-lg mb-6 text-sm border border-red-100">{error}</div>}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                    <label className="block text-sm font-bold text-gray-700 mb-2">Título del ticket</label>
+                    <input 
+                        type="text" 
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        placeholder="Ej: La impresora no enciende"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-all bg-gray-50 focus:bg-white"
+                        required 
+                    />
+                </div>
+                
+                <div>
+                    <label className="block text-sm font-bold text-gray-700 mb-2">Descripción detallada</label>
+                    <textarea 
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                        placeholder="Contanos qué pasó, cuándo empezó y qué mensajes de error aparecen..."
+                        rows="6"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-all bg-gray-50 focus:bg-white resize-none"
+                        required 
+                    ></textarea>
+                </div>
+
+                <div className="flex justify-end gap-4 pt-4 border-t">
+                    <button 
+                        type="button" 
+                        onClick={() => navigate('/tickets')}
+                        className="px-6 py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-lg transition-colors"
+                    >
+                        Cancelar
+                    </button>
+                    <button 
+                        type="submit" 
+                        disabled={loading}
+                        className="bg-blue-600 text-white px-8 py-2 rounded-lg font-bold hover:bg-blue-700 disabled:opacity-50 shadow-md transition-colors"
+                    >
+                        {loading ? 'Creando...' : 'Crear Ticket'}
+                    </button>
+                </div>
+            </form>
+        </div>
+    );
+};
+
+export default NewTicket;
+</file>
+
+<file path="src/pages/NotFound.jsx">
+import { Link } from 'react-router-dom';
+
+const NotFound = () => {
+    return (
+        <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
+            <h1 className="text-9xl font-extrabold text-blue-600 mb-4">404</h1>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Opción no disponible</h2>
+            <p className="text-gray-500 mb-8 max-w-md">
+                La página que estás buscando no existe, fue movida o no tenés permiso para verla.
+            </p>
+            <Link to="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors shadow-lg">
+                Volver al Inicio
+            </Link>
+        </div>
+    );
+};
+
+export default NotFound;
+</file>
+
+<file path="src/pages/Products.jsx">
+import { products } from '../data/products';
+
+const Products = () => {
+    return (
+        <div className="max-w-6xl mx-auto mt-6">
+            <div className="text-center mb-12">
+                <h2 className="text-4xl font-extrabold text-gray-800 mb-2">Nuestros Servicios</h2>
+                <p className="text-gray-500 text-lg">Soluciones tecnológicas diseñadas para potenciar tu trabajo.</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {products.map((product) => (
+                    <div key={product.id} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div className="mb-4 overflow-hidden rounded-xl h-40">
+                                <img 
+                                    src={product.image} 
+                                    alt={product.name} 
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 text-gray-800">{product.name}</h3>
+                            <p className="text-gray-500 mb-6 text-sm leading-relaxed">{product.description}</p>
+                        </div>
+                        <div className="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                            <span className="text-2xl font-extrabold text-blue-600">{product.price}</span>
+                            <button className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg font-bold text-sm hover:bg-blue-600 hover:text-white transition-colors">
+                                Consultar
+                            </button>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default Products;
+</file>
+
+<file path="src/pages/Register.jsx">
+import { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+
+const Register = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const { register } = useAuth();
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError('');
+        setLoading(true);
+        try {
+            await register(name, email, password);
+            navigate('/tickets');
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
+        <div className="flex justify-center items-center min-h-[70vh]">
+            <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <div className="text-center mb-8">
+                    <h2 className="text-3xl font-extrabold text-gray-800">Crear Cuenta</h2>
+                    <p className="text-gray-500 mt-2">Unite para empezar a reportar problemas</p>
+                </div>
+                
+                {error && <div className="bg-red-50 text-red-600 p-3 rounded-lg mb-6 text-sm border border-red-100 text-center">{error}</div>}
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+                        <input 
+                            type="text" 
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-all"
+                            required 
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+                        <input 
+                            type="email" 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-all"
+                            required 
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Contraseña (mín. 6 caracteres)</label>
+                        <input 
+                            type="password" 
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-all"
+                            required 
+                            minLength={6}
+                        />
+                    </div>
+                    <button 
+                        type="submit" 
+                        disabled={loading}
+                        className="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700 transition-colors disabled:opacity-50 shadow-md"
+                    >
+                        {loading ? 'Creando cuenta...' : 'Registrarme'}
+                    </button>
+                </form>
+
+                <p className="mt-6 text-center text-sm text-gray-600">
+                    ¿Ya tenés cuenta? <Link to="/login" className="text-green-600 font-bold hover:underline">Iniciá sesión</Link>
+                </p>
+            </div>
+        </div>
+    );
+};
+
+export default Register;
+</file>
+
+<file path="src/pages/TicketDetail.jsx">
+import { useState, useEffect } from 'react';
+import { useParams, useNavigate, Link } from 'react-router-dom';
+import { api } from '../api/client';
+import StatusBadge from '../components/StatusBadge';
+import Loading from '../components/Loading';
+
+const TicketDetail = () => {
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const [ticket, setTicket] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+    const [isEditing, setIsEditing] = useState(false);
+    const [editTitle, setEditTitle] = useState('');
+    const [editDescription, setEditDescription] = useState('');
+
+    useEffect(() => {
+        const fetchTicket = async () => {
+            try {
+                const data = await api(`/tickets/${id}`);
+                setTicket(data);
+                setEditTitle(data.title);
+                setEditDescription(data.description);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchTicket();
+    }, [id]);
+
+    const handleUpdate = async (e) => {
+        e.preventDefault();
+        try {
+            const updated = await api(`/tickets/${id}`, {
+                method: 'PATCH',
+                body: JSON.stringify({ title: editTitle, description: editDescription }),
+            });
+            setTicket(updated);
+            setIsEditing(false);
+            setError('');
+        } catch (err) {
+            setError(err.message);
+        }
+    };
+
+    const handleDelete = async () => {
+        if (!window.confirm('¿Estás seguro de que querés eliminar este ticket definitivamente?')) return;
+        try {
+            await api(`/tickets/${id}`, { method: 'DELETE' });
+            navigate('/tickets');
+        } catch (err) {
+            setError(err.message);
+        }
+    };
+
+    if (loading) return <Loading />;
+    if (error) return <div className="text-center mt-10 text-red-600 font-bold bg-red-50 p-4 rounded max-w-lg mx-auto">{error}</div>;
+    if (!ticket) return <div className="text-center mt-10">Ticket no encontrado</div>;
+
+    const isOpen = ticket.status === 'open';
+
+    return (
+        <div className="max-w-3xl mx-auto mt-8 bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <div className="flex justify-between items-start mb-6 border-b border-gray-100 pb-6">
+                <div>
+                    <h2 className="text-3xl font-extrabold text-gray-800 flex items-center gap-3">
+                        <span className="text-gray-300 text-2xl">#{ticket.id}</span>
+                        {ticket.title}
+                    </h2>
+                    <p className="text-sm text-gray-500 mt-2 font-medium">
+                        📅 Reportado el {new Date(ticket.createdAt).toLocaleString('es-AR')}
+                    </p>
+                </div>
+                <StatusBadge status={ticket.status} />
+            </div>
+
+            {isEditing ? (
+                <form onSubmit={handleUpdate} className="space-y-5 bg-gray-50 p-6 rounded-xl border border-gray-200">
+                    <div>
+                        <label className="block text-sm font-bold text-gray-700 mb-1">Título</label>
+                        <input 
+                            type="text" value={editTitle} onChange={(e) => setEditTitle(e.target.value)}
+                            className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 outline-none" required 
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-bold text-gray-700 mb-1">Descripción</label>
+                        <textarea 
+                            value={editDescription} onChange={(e) => setEditDescription(e.target.value)} rows="5"
+                            className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 outline-none resize-none" required 
+                        ></textarea>
+                    </div>
+                    <div className="flex gap-3">
+                        <button type="submit" className="bg-green-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-green-700 shadow-md transition-colors">
+                            Guardar Cambios
+                        </button>
+                        <button type="button" onClick={() => setIsEditing(false)} className="bg-white border border-gray-300 text-gray-700 px-6 py-2 rounded-lg font-bold hover:bg-gray-50 transition-colors">
+                            Cancelar
+                        </button>
+                    </div>
+                </form>
+            ) : (
+                <div>
+                    <h3 className="font-bold text-gray-800 mb-3 text-lg">Descripción del problema:</h3>
+                    <div className="text-gray-700 whitespace-pre-wrap bg-blue-50/50 p-6 rounded-xl border border-blue-100 leading-relaxed">
+                        {ticket.description}
+                    </div>
+
+                    <div className="mt-8 flex flex-wrap gap-3 border-t border-gray-100 pt-6 items-center">
+                        <Link to="/tickets" className="text-blue-600 font-bold hover:underline mr-auto">
+                            ← Volver a mis tickets
+                        </Link>
+                        
+                        {isOpen && (
+                            <>
+                                <button onClick={() => setIsEditing(true)} className="bg-yellow-500 text-white px-5 py-2 rounded-lg font-bold hover:bg-yellow-600 shadow-md transition-colors">
+                                    ✏️ Editar
+                                </button>
+                                <button onClick={handleDelete} className="bg-red-600 text-white px-5 py-2 rounded-lg font-bold hover:bg-red-700 shadow-md transition-colors">
+                                    🗑️ Eliminar
+                                </button>
+                            </>
+                        )}
+                    </div>
+                    
+                    {!isOpen && (
+                        <div className="mt-6 bg-gray-50 text-gray-500 p-4 rounded-lg text-center text-sm font-medium border border-gray-200">
+                            🔒 Este ticket está {ticket.status === 'in_progress' ? 'en proceso' : 'cerrado'} y ya no se puede editar ni eliminar.
+                        </div>
+                    )}
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default TicketDetail;
+</file>
+
+<file path="src/App.jsx">
+import { Routes, Route } from 'react-router-dom';
+import ProtectedRoute from './components/ProtectedRoute';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+// Páginas
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import MyTickets from './pages/MyTickets';
+import NewTicket from './pages/NewTicket';
+import TicketDetail from './pages/TicketDetail';
+import AdminTickets from './pages/AdminTickets';
+import AdminUsers from './pages/AdminUsers';
+import NotFound from './pages/NotFound';
+
+const App = () => {
+    return (
+        <div className="flex flex-col min-h-screen bg-slate-100">
+            <Navbar />
+            
+            {/* El main crece para empujar el footer abajo */}
+            <main className="flex-grow container mx-auto p-4">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+
+                    <Route element={<ProtectedRoute />}>
+                        <Route path="/tickets" element={<MyTickets />} />
+                        <Route path="/tickets/new" element={<NewTicket />} />
+                        <Route path="/tickets/:id" element={<TicketDetail />} />
+                    </Route>
+
+                    <Route element={<ProtectedRoute requireAdmin={true} />}>
+                        <Route path="/admin/tickets" element={<AdminTickets />} />
+                        <Route path="/admin/users" element={<AdminUsers />} />
+                    </Route>
+
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </main>
+
+            <Footer />
+        </div>
+    );
+};
+
+export default App;
+</file>
+
+<file path="src/index.css">
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+</file>
+
+<file path="src/main.jsx">
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext.jsx';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    </BrowserRouter>
+  </React.StrictMode>
+);
+</file>
+
+<file path=".gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
+<file path="eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      globals: globals.browser,
+      parserOptions: { ecmaFeatures: { jsx: true } },
+    },
+  },
+])
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Tickets - Soporte</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+</file>
+
+<file path="package.json">
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "^10.13.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "vite": "^8.3.4"
+  }
+}
+</file>
+
+<file path="README.md">
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+</file>
+
+<file path="vercel.json">
+{
+    "rewrites": [
+        { "source": "/(.*)", "destination": "/index.html" }
+    ]
+}
+</file>
+
+<file path="vite.config.js">
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+})
+</file>
+
+</files>

@@ -7,7 +7,7 @@ if(!process.env.DATABASE_URL){
 };
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
-    dialect: "postgres",
+    dialect: 'postgres',
     dialectModule: pg,
     logging: false,
     dialectOptions:{ 

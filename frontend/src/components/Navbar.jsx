@@ -18,8 +18,6 @@ const Navbar = () => {
     return (
         <nav className="bg-gray-800 shadow-md sticky top-0 z-50">
             <div className="container mx-auto px-4 py-2 flex justify-between items-center flex-wrap gap-4">
-                
-                {/* LOGO Y NAVEGACIÓN */}
                 <div className="flex gap-4 items-center">
                     <Link to="/" className="text-xl font-extrabold text-white flex items-center gap-2 mr-4 hover:text-blue-400 transition-colors">
                         🛠️ Soporte Técnico
@@ -28,10 +26,16 @@ const Navbar = () => {
                     <div className="flex gap-2 items-center border-l border-gray-600 pl-4">
                         <NavLink to="/" end className={navLinkClass}>Inicio</NavLink>
                         <NavLink to="/products" className={navLinkClass}>Productos</NavLink>
+                        
+                        {user && (
+                            <>
+                                <NavLink to="/agenda" className={navLinkClass}>Agenda</NavLink>
+                                <NavLink to="/inventario" className={navLinkClass}>Inventario</NavLink>
+                            </>
+                        )}
                     </div>
                 </div>
 
-                {/* OPCIONES DE USUARIO */}
                 <div className="flex gap-2 items-center flex-wrap">
                     {!user && (
                         <>
@@ -65,5 +69,4 @@ const Navbar = () => {
         </nav>
     );
 };
-
 export default Navbar;
