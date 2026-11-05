@@ -1,4 +1,4 @@
-# 🚀 App Integrada - Sistema de Gestión
+# 💻 App Integrada - Sistema de Gestión
 
 Aplicación web Full-Stack que unifica tres módulos fundamentales para cualquier empresa: **Soporte Técnico (Tickets)**, **Control de Inventario** y **Agenda de Contactos**. Todo gestionado desde un único panel de control seguro con roles de usuario.
 
